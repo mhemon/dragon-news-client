@@ -27,7 +27,7 @@ const LeftNav = () => {
                               color: isPending ? "red" : "black",
                             };
                           }}
-                          to="/"
+                          to={`/category/${category.id}`}
                           >{category.name}</NavLink>
                     </p>
                     )
