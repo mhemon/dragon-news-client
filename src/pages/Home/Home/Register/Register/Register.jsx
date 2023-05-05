@@ -6,11 +6,14 @@ import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import useTitle from '../../../../../hooks/useTitle';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
     const navigate = useNavigate()
     const [checked, setChecked] = useState(false)
+
+    useTitle('Register')
 
     const handleSubmit = (event) => {
         event.preventDefault()

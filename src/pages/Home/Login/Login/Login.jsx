@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../provider/AuthProvider';
 import { useState } from 'react';
+import useTitle from '../../../../hooks/useTitle';
 
 const Login = () => {
     const {loginUser} = useContext(AuthContext)
@@ -13,6 +14,8 @@ const Login = () => {
     const [success, setSuccess] = useState('')
     const navigate = useNavigate()
     const location = useLocation()
+
+    useTitle('Login')
 
     let from = location.state?.from?.pathname || "/category/0";
 

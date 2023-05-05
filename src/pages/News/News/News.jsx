@@ -4,8 +4,11 @@ import Button from 'react-bootstrap/Button';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import EditorInsight from '../EditorsInsight/EditorInsight';
+import useTitle from '../../../hooks/useTitle';
 
 const News = () => {
+
+    useTitle('News Card')
 
     const news = useLoaderData()
 

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaRegBookmark, FaShareAlt, FaEye, FaRegStar, FaStar, FaStarHalf } from "react-icons/fa";
 import moment from 'moment/moment';
 import Rating from 'react-rating';
+import useTitle from '../../../hooks/useTitle';
 
 const NewsCard = ({ news }) => {
     const { _id, title, image_url, details, author, total_view, rating } = news
